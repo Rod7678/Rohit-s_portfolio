@@ -1,125 +1,92 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
-import './App.css'
+import { useState } from "react";
+import reactLogo from "./assets/react.svg";
+import viteLogo from "./assets/vite.svg";
+import heroImg from "./assets/hero.png";
+import "./App.css";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(0);
 
   return (
     <>
-    <header>
-      <h1>Rohit Ghadge</h1>
-    </header>
+      <header>
+        <h1 style={"textAlign: center;"}>Rohit Ghadge</h1>
+        <p style="text-align:center;">Home | Projects | Blogs | Contact</p>
+      </header>
       <section id="center">
-        <div className="hero">
-          <img src={heroImg} className="base" width="170" height="179" alt="" />
-          <img src={reactLogo} className="framework" alt="React logo" />
-          <img src={viteLogo} className="vite" alt="Vite logo" />
-        </div>
-        <div>
-          <h1>Get started</h1>
-          <p>
-            Edit <code>src/App.jsx</code> and save to test <code>HMR</code>
-          </p>
-        </div>
-        <button
-          type="button"
-          className="counter"
-          onClick={() => setCount((count) => count + 1)}
-        >
-          Count is {count}
-        </button>
+        <h2>Web Developer and Designer</h2>
       </section>
-
-      <div className="ticks"></div>
-
-      <section id="next-steps">
-        <div id="docs">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#documentation-icon"></use>
-          </svg>
-          <h2>Documentation</h2>
-          <p>Your questions, answered</p>
-          <ul>
-            <li>
-              <a href="https://vite.dev/" target="_blank">
-                <img className="logo" src={viteLogo} alt="" />
-                Explore Vite
-              </a>
-            </li>
-            <li>
-              <a href="https://react.dev/" target="_blank">
-                <img className="button-icon" src={reactLogo} alt="" />
-                Learn more
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div id="social">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#social-icon"></use>
-          </svg>
-          <h2>Connect with us</h2>
-          <p>Join the Vite community</p>
-          <ul>
-            <li>
-              <a href="https://github.com/vitejs/vite" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#github-icon"></use>
-                </svg>
-                GitHub
-              </a>
-            </li>
-            <li>
-              <a href="https://chat.vite.dev/" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#discord-icon"></use>
-                </svg>
-                Discord
-              </a>
-            </li>
-            <li>
-              <a href="https://x.com/vite_js" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#x-icon"></use>
-                </svg>
-                X.com
-              </a>
-            </li>
-            <li>
-              <a href="https://bsky.app/profile/vite.dev" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#bluesky-icon"></use>
-                </svg>
-                Bluesky
-              </a>
-            </li>
-          </ul>
-        </div>
-      </section>
+      <table border="1" width="100%">
+        <tr>
+          <td>
+            <h3>portfolio highlight</h3>
+            <ul>
+              <li>Responsive HTML Layout</li>
+              <li>E-commerce Storefront</li>
+              <li>Interactive Form Design</li>
+              <li>Event Countdown Widget</li>
+              <li>Prototype Landing Pages</li>
+            </ul>
+          </td>
+          <td>
+            <h3>Career Achievements</h3>
+            <p>
+              Frontend Developer [Intern] at XYZ
+              <br />
+              Headed major product redesigns resulting in a 40% increase in user
+              engagement.
+              <br />
+              <a href="#">View My LinkedIn Profile</a>
+            </p>
+            <h3>Community Involvement</h3>
+            <p>
+              Active participant in local and online developer forums. Regularly
+              contribute to web development blogs and GitHub projects.
+              <br />
+              <a href="#">Visit My GitHub</a>
+            </p>
+          </td>
+          <td>
+            <h3>Academic Qualifications</h3>
+            <p>B.Tech (Computer Science) from ABC University</p>
+            <p>Specializations:</p>
+            <ul>
+              <li>Systems Analysis</li>
+              <li>Advanced JavaScript Techniques</li>
+              <li>Web Accessibility Standards</li>
+              <li>Performance Optimization in Web Applications</li>
+              <li>Cloud Computing Infrastructure</li>
+              <li>Security in Web Applications</li>
+              <li>Advanced Algorithms</li>
+            </ul>
+          </td>
+        </tr>
+      </table>
+      <h3>Peer Reviews</h3>
+      <table border="1" width="100%">
+        <tr>
+          <td>
+            John Doe consistently delivers high-quality, innovative solutions
+            that exceed project expectations. - Steven, Project Lead
+          </td>
+          <td>
+            John Doe is known for his precise attention to detail and his
+            ability to mentor younger developers. - David, UI Designer
+          </td>
+          <td>
+            John's approach to problem-solving has been instrumental in our
+            success. - Sarah, Frontend Developer
+          </td>
+        </tr>
+      </table>
+      <footer style="text-align:center;">
+        © [2025] All rights reserved by John Doe
+      </footer>
 
       <div className="ticks"></div>
       <section id="spacer"></section>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
