@@ -9,6 +9,9 @@ function App() {
 
   return (
     <>
+    <header>
+      <h1>Rohit Ghadge</h1>
+    </header>
       <section id="center">
         <div className="hero">
           <img src={heroImg} className="base" width="170" height="179" alt="" />
