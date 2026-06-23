@@ -10,8 +10,8 @@ function App() {
   return (
     <>
       <header>
-        <h1 style={"textAlign: center;"}>Rohit Ghadge</h1>
-        <p style="text-align:center;">Home | Projects | Blogs | Contact</p>
+        <h1 style={{textAlign: "center"}}>Rohit Ghadge</h1>
+        <p style={{textAlign:"center"}}>Home | Projects | Blogs | Contact</p>
       </header>
       <section id="center">
         <h2>Web Developer and Designer</h2>
@@ -79,7 +79,7 @@ function App() {
           </td>
         </tr>
       </table>
-      <footer style="text-align:center;">
+      <footer style={{textAlign:"center"}}>
         © [2025] All rights reserved by John Doe
       </footer>
 
