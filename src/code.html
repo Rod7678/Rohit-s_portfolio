@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Your Name — Software Developer</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --bg: #0d0d12;
+    --bg2: #13131a;
+    --bg3: #1a1a24;
+    --border: rgba(255,255,255,0.08);
+    --text: #f0eff8;
+    --muted: #8887a0;
+    --accent: #a78bfa;
+    --accent2: #818cf8;
+    --green: #34d399;
+    --card-bg: rgba(255,255,255,0.04);
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    font-size: 16px;
+  }
+
+  /* NAV */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 1rem 2rem;
+    background: rgba(13,13,18,0.85);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .nav-logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem;
+    font-style: italic;
+    color: var(--accent);
+    text-decoration: none;
+  }
+
+  .nav-links { display: flex; gap: 2rem; list-style: none; }
+  .nav-links a {
+    color: var(--muted); text-decoration: none; font-size: 0.875rem;
+    transition: color 0.2s;
+  }
+  .nav-links a:hover { color: var(--text); }
+
+  /* SECTIONS */
+  section { padding: 6rem 2rem; max-width: 900px; margin: 0 auto; }
+
+  /* HERO */
+  #hero {
+    min-height: 100vh;
+    display: flex; flex-direction: column; justify-content: center;
+    padding-top: 8rem;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .hero-eyebrow {
+    font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--accent); margin-bottom: 1.25rem;
+  }
+
+  h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    line-height: 1.1; font-weight: 700;
+    margin-bottom: 1.5rem;
+  }
+
+  h1 em {
+    font-style: italic; color: var(--accent);
+  }
+
+  .hero-sub {
+    font-size: 1.05rem; color: var(--muted); max-width: 500px;
+    margin-bottom: 2.5rem; line-height: 1.75;
+  }
+
+  .hero-ctas { display: flex; gap: 1rem; flex-wrap: wrap; }
+
+  .btn-primary {
+    display: inline-block; padding: 0.75rem 1.75rem;
+    background: var(--accent); color: #0d0d12;
+    font-weight: 600; font-size: 0.875rem;
+    text-decoration: none; border-radius: 8px;
+    transition: opacity 0.2s, transform 0.2s;
+  }
+  .btn-primary:hover { opacity: 0.85; transform: translateY(-1px); }
+
+  .btn-secondary {
+    display: inline-block; padding: 0.75rem 1.75rem;
+    border: 1px solid var(--border); color: var(--text);
+    font-size: 0.875rem; text-decoration: none; border-radius: 8px;
+    transition: border-color 0.2s, transform 0.2s;
+  }
+  .btn-secondary:hover { border-color: var(--accent); transform: translateY(-1px); }
+
+  .hero-stats {
+    display: flex; gap: 3rem; margin-top: 4rem;
+    padding-top: 2rem; border-top: 1px solid var(--border);
+  }
+  .stat-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem; font-weight: 700; color: var(--text);
+  }
+  .stat-label { font-size: 0.8rem; color: var(--muted); margin-top: 0.25rem; }
+
+  /* SECTION HEADINGS */
+  .section-eyebrow {
+    font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase;
+    color: var(--accent); margin-bottom: 0.75rem;
+  }
+
+  h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.75rem, 4vw, 2.5rem);
+    font-weight: 700; margin-bottom: 0.75rem; line-height: 1.2;
+  }
+
+  h2 em { font-style: italic; color: var(--accent); }
+
+  .section-sub {
+    color: var(--muted); font-size: 0.95rem; max-width: 500px;
+    margin-bottom: 3rem;
+  }
+
+  /* EXPERTISE GRID */
+  .expertise-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+  }
+
+  .expertise-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 12px; padding: 1.5rem;
+    transition: border-color 0.2s, transform 0.2s;
+  }
+  .expertise-card:hover { border-color: rgba(167,139,250,0.3); transform: translateY(-2px); }
+
+  .expertise-icon {
+    width: 36px; height: 36px; border-radius: 8px;
+    margin-bottom: 1rem;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.1rem;
+  }
+
+  .icon-purple { background: rgba(167,139,250,0.15); }
+  .icon-blue { background: rgba(129,140,248,0.15); }
+  .icon-green { background: rgba(52,211,153,0.15); }
+  .icon-pink { background: rgba(244,114,182,0.15); }
+
+  .expertise-title {
+    font-size: 0.9rem; font-weight: 600; margin-bottom: 0.5rem; color: var(--text);
+  }
+
+  .expertise-desc { font-size: 0.8rem; color: var(--muted); line-height: 1.6; }
+
+  .tag-row { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 0.75rem; }
+  .tag {
+    font-size: 0.7rem; padding: 0.2rem 0.6rem;
+    border-radius: 4px; border: 1px solid var(--border);
+    color: var(--muted);
+  }
+
+  /* PROJECTS */
+  .projects-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.25rem;
+  }
+
+  .project-card {
+    background: var(--bg2);
+    border: 1px solid var(--border); border-radius: 12px;
+    overflow: hidden; transition: border-color 0.2s, transform 0.2s;
+    cursor: pointer;
+  }
+  .project-card:hover { border-color: rgba(167,139,250,0.35); transform: translateY(-3px); }
+
+  .project-thumb {
+    height: 140px; background: var(--bg3);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 2rem; border-bottom: 1px solid var(--border);
+  }
+
+  .project-body { padding: 1.25rem; }
+  .project-name { font-size: 0.95rem; font-weight: 600; margin-bottom: 0.4rem; }
+  .project-desc { font-size: 0.8rem; color: var(--muted); line-height: 1.6; margin-bottom: 0.75rem; }
+
+  /* TECH */
+  .tech-section {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 2rem;
+  }
+
+  .tech-group-label {
+    font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em;
+    color: var(--muted); margin-bottom: 1rem;
+  }
+
+  .tech-pills { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+  .tech-pill {
+    background: var(--card-bg); border: 1px solid var(--border);
+    border-radius: 6px; padding: 0.35rem 0.85rem;
+    font-size: 0.8rem; color: var(--text);
+    transition: border-color 0.2s;
+  }
+  .tech-pill:hover { border-color: rgba(167,139,250,0.4); }
+
+  /* ABOUT */
+  #about .about-grid {
+    display: grid; grid-template-columns: 1fr 1.6fr; gap: 4rem; align-items: start;
+  }
+
+  .avatar-block {
+    display: flex; flex-direction: column; align-items: center; gap: 1rem;
+  }
+
+  .avatar-circle {
+    width: 140px; height: 140px; border-radius: 50%;
+    background: linear-gradient(135deg, var(--accent), var(--accent2));
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Playfair Display', serif; font-size: 2.5rem;
+    color: #fff; font-style: italic;
+    border: 3px solid rgba(167,139,250,0.3);
+  }
+
+  .about-name { font-weight: 600; font-size: 1rem; text-align: center; }
+  .about-role { font-size: 0.8rem; color: var(--muted); text-align: center; }
+
+  .about-text { font-size: 0.95rem; color: var(--muted); line-height: 1.8; }
+  .about-text p + p { margin-top: 1rem; }
+
+  /* CONTACT */
+  #contact { text-align: center; }
+  #contact h2 { margin-bottom: 0.5rem; }
+  #contact .section-sub { margin: 0 auto 2.5rem; }
+
+  .contact-links {
+    display: flex; justify-content: center; flex-wrap: wrap; gap: 1rem;
+  }
+
+  /* FOOTER */
+  footer {
+    border-top: 1px solid var(--border);
+    padding: 2rem; text-align: center;
+    font-size: 0.8rem; color: var(--muted);
+  }
+
+  /* DIVIDER */
+  .divider { border: none; border-top: 1px solid var(--border); margin: 0; }
+
+  /* RESPONSIVE */
+  @media (max-width: 600px) {
+    nav { padding: 1rem; }
+    .nav-links { gap: 1rem; }
+    section { padding: 4rem 1.25rem; }
+    .hero-stats { gap: 1.5rem; flex-wrap: wrap; }
+    .tech-section { grid-template-columns: 1fr; }
+    #about .about-grid { grid-template-columns: 1fr; gap: 2rem; }
+  }
+</style>
+</head>
+<body>
+
+
+
+<!-- HERO -->
+<!-- EXPERTISE -->
+
+
+<!-- PROJECTS -->
+
+<hr class="divider">
+
+<!-- TECH STACK -->
+<section id="stack">
+  <p class="section-eyebrow">Technical Expertise</p>
+  <h2><em>Tech</em> Stack</h2>
+  <p class="section-sub">A comprehensive toolkit of languages, frameworks, and technologies I use to architect scalable solutions.</p>
+
+  <div class="tech-section">
+    <div>
+      <div class="tech-group-label">Core Stack</div>
+      <div class="tech-pills">
+        <span class="tech-pill">JavaScript</span>
+        <span class="tech-pill">TypeScript</span>
+        <span class="tech-pill">Python</span>
+        <span class="tech-pill">React</span>
+        <span class="tech-pill">Next.js</span>
+        <span class="tech-pill">Node.js</span>
+      </div>
+    </div>
+    <div>
+      <div class="tech-group-label">Languages</div>
+      <div class="tech-pills">
+        <span class="tech-pill">Java</span>
+        <span class="tech-pill">Go</span>
+        <span class="tech-pill">Rust</span>
+        <span class="tech-pill">SQL</span>
+      </div>
+    </div>
+    <div style="margin-top: 1.5rem;">
+      <div class="tech-group-label">Infrastructure & Databases</div>
+      <div class="tech-pills">
+        <span class="tech-pill">AWS</span>
+        <span class="tech-pill">Docker</span>
+        <span class="tech-pill">Kubernetes</span>
+        <span class="tech-pill">PostgreSQL</span>
+        <span class="tech-pill">MongoDB</span>
+        <span class="tech-pill">Redis</span>
+      </div>
+    </div>
+    <div style="margin-top: 1.5rem;">
+      <div class="tech-group-label">Tools</div>
+      <div class="tech-pills">
+        <span class="tech-pill">Git</span>
+        <span class="tech-pill">Figma</span>
+        <span class="tech-pill">Linux</span>
+        <span class="tech-pill">CI/CD</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- ABOUT -->
+<section id="about">
+  <p class="section-eyebrow">Who I Am</p>
+  <h2>About <em>Me</em></h2>
+  <div class="about-grid">
+    <div class="avatar-block">
+      <div class="avatar-circle">YN</div>
+      <div class="about-name">Your Name</div>
+      <div class="about-role">Software Engineer</div>
+    </div>
+    <div class="about-text">
+      <p>I'm a software engineer with 3+ years of experience building products from scratch — with deep expertise in backend systems and AI. I'm passionate about crafting things that are both technically robust and a joy to use.</p>
+      <p>Previously, I've worked on [mention past roles or projects here]. With projects like [Project A] and [Project B], I've honed my skills working with Python, Flutter, and serverless architectures.</p>
+      <p>When I'm not building, I'm writing about software, contributing to open source, or exploring the latest in AI research. Let's make something great together.</p>
+      <div style="margin-top: 1.5rem;">
+        <a href="#contact" class="btn-secondary">Discover my journey →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- CONTACT -->
+<section id="contact">
+  <p class="section-eyebrow">Let's Work</p>
+  <h2>Let's Work <em>Together</em></h2>
+  <p class="section-sub">I'm currently open to new engineering opportunities. Want to build something incredible? Let's connect.</p>
+  <div class="contact-links">
+    <a href="mailto:you@example.com" class="btn-primary">Start a Conversation</a>
+    <a href="https://github.com/" target="_blank" class="btn-secondary">GitHub</a>
+    <a href="https://linkedin.com/" target="_blank" class="btn-secondary">LinkedIn</a>
+    <a href="#" class="btn-secondary">Resume ↓</a>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 Your Name · Built with care</p>
+</footer>
+
+</body>
+</html>
