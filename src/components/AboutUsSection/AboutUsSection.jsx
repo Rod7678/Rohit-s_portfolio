@@ -1,3 +1,5 @@
+import "./aboutUsSection.css";
+
 const AboutUsSection = () => {
   return (
     <section id="about">
@@ -8,19 +10,19 @@ const AboutUsSection = () => {
       <div className="about-grid">
         <div className="avatar-block">
           <div className="avatar-circle">YN</div>
-          <div className="about-name">Your Name</div>
+          <div className="about-name">Rohit Ghadge</div>
           <div className="about-role">Software Engineer</div>
         </div>
         <div className="about-text">
           <p>
-            I'm a software engineer with 3+ years of experience building
+            I'm a software engineer with 2+ years of experience building
             products from scratch — with deep expertise in backend systems and
             AI. I'm passionate about crafting things that are both technically
             robust and a joy to use.
           </p>
           <p>
-            Previously, I've worked on [mention past roles or projects here].
-            With projects like [Project A] and [Project B], I've honed my skills
+            Previously, I've worked on Pagelayer And Sitepad Web page Builder.
+            With projects like Kanban Board and AI Onboarding System, I've honed my skills
             working with Python, Flutter, and serverless architectures.
           </p>
           <p>
