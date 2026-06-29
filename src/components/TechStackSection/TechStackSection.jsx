@@ -1,3 +1,5 @@
+import "./techStackSection.css";
+
 const TeckStackSection = () => {
   return (
     <section id="stack">
