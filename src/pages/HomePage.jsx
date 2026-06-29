@@ -8,19 +8,18 @@ import TeckStackSection from "../components/TechStackSection/TechStackSection";
 const HomePage = () => {
   return (
     <>
-      <h1>Home Page</h1>
       <HeroSection />
-      <hr class="divider"/>
+      <hr className="divider"/>
       <ExpertiseSection />
-      <hr class="divider"/>
+      <hr className="divider"/>
       <ProjectSection />
-      <hr class="divider"/>
+      <hr className="divider"/>
       <TeckStackSection />
-      <hr class="divider"/>
+      <hr className="divider"/>
       <AboutUsSection />
-      <hr class="divider"/>
+      <hr className="divider"/>
       <ContactSection />
-      <hr class="divider"/>
+      <hr className="divider"/>
 
     </>
   );

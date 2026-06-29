@@ -10,16 +10,19 @@ import About from "./pages/About";
 import Projects from "./pages/Projects";
 
 function App() {
-  return <>
-  <BrowserRouter>
-  <Routes>
-    <Route path="/" element={<RootLayout/>}/>
-    <Route index element={<HomePage />}/>
-    <Route path="/about" element={<About />}/>
-    <Route path="/projects" element={<Projects />}/>
-  </Routes>
-  </BrowserRouter>
-  </>;
+  return (
+    <>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<RootLayout />}>
+            <Route index element={<HomePage />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/projects" element={<Projects />} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
+    </>
+  );
 }
 
 export default App;

@@ -1,17 +1,17 @@
 const AboutUsSection = () => {
   return (
     <section id="about">
-      <p class="section-eyebrow">Who I Am</p>
+      <p className="section-eyebrow">Who I Am</p>
       <h2>
         About <em>Me</em>
       </h2>
-      <div class="about-grid">
-        <div class="avatar-block">
-          <div class="avatar-circle">YN</div>
-          <div class="about-name">Your Name</div>
-          <div class="about-role">Software Engineer</div>
+      <div className="about-grid">
+        <div className="avatar-block">
+          <div className="avatar-circle">YN</div>
+          <div className="about-name">Your Name</div>
+          <div className="about-role">Software Engineer</div>
         </div>
-        <div class="about-text">
+        <div className="about-text">
           <p>
             I'm a software engineer with 3+ years of experience building
             products from scratch — with deep expertise in backend systems and
@@ -28,8 +28,8 @@ const AboutUsSection = () => {
             open source, or exploring the latest in AI research. Let's make
             something great together.
           </p>
-          <div style="margin-top: 1.5rem;">
-            <a href="#contact" class="btn-secondary">
+          <div style={{marginTop: "1.5rem;"}}>
+            <a href="#contact" className="btn-secondary">
               Discover my journey →
             </a>
           </div>

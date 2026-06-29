@@ -1,10 +1,12 @@
+import "./navbar.css";
+
 const Navbar = () => {
   return (
     <nav>
-      <a href="#hero" class="nav-logo">
-        yourname.dev
+      <a href="#hero" className="nav-logo">
+        RohitGhadge.dev
       </a>
-      <ul class="nav-links">
+      <ul className="nav-links">
         <li>
           <a href="#expertise">Skills</a>
         </li>
