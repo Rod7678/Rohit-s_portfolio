@@ -1,3 +1,4 @@
+import "./expertisesection.css";
 const ExpertiseSection = () => {
   return (
     <section id="expertise">
