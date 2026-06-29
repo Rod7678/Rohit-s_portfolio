@@ -1,4 +1,4 @@
-import "./expertisesection.css";
+import "./expertiseSection.css";
 const ExpertiseSection = () => {
   return (
     <section id="expertise">
