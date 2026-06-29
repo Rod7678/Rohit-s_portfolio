@@ -35,3 +35,12 @@ nav {
 .nav-links a:hover {
   color: var(--text);
 }
+
+@media (max-width: 600px) {
+  nav {
+    padding: 1rem;
+  }
+  .nav-links {
+    gap: 1rem;
+  }
+}

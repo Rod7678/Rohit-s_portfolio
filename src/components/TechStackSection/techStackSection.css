@@ -29,3 +29,9 @@
 .tech-pill:hover {
   border-color: rgba(167, 139, 250, 0.4);
 }
+
+@media (max-wdth: 600px) {
+  .tech-section {
+    grid-template-columns: 1fr;
+  }
+}

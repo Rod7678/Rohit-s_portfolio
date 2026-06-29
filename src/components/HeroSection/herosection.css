@@ -96,3 +96,10 @@ h1 em {
   color: var(--muted);
   margin-top: 0.25rem;
 }
+
+@media (max-width: 600px) {
+  .hero-stats {
+    gap: 1.5rem;
+    flex-wrap: wrap;
+  }
+}

@@ -46,3 +46,10 @@
 .about-text p + p {
   margin-top: 1rem;
 }
+
+@media (max-wdth: 600px) {
+  #about .about-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
