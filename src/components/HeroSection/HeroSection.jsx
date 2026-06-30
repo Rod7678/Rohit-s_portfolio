@@ -10,7 +10,7 @@ const HeroSection = () => {
         experiences
       </h1>
       <p className="hero-sub">
-        Hi, I'm [Your Name]. A software engineer specialising in scalable
+        Hi, I'm Rohit Ghadge. A software engineer specialising in scalable
         systems, AI, and delightful user interfaces.
       </p>
       <div className="hero-ctas">

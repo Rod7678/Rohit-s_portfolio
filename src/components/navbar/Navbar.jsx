@@ -19,6 +19,16 @@ const Navbar = () => {
         <li>
           <a href="#contact">Contact</a>
         </li>
+        <li>
+          <a
+            href="/Rohit_Ghadge-F.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="resume-btn"
+          >
+            Resume
+          </a>
+        </li>
       </ul>
     </nav>
   );
