@@ -1,11 +1,15 @@
 #hero {
   min-height: 100vh;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  flex-direction: row;
+  justify-content: space-between;
   padding-top: 8rem;
   max-width: 1400px;
   margin: 0 auto;
+}
+.hero-info {
+  display: flex;
+  flex-direction: column;
 }
 
 .hero-eyebrow {
@@ -96,6 +100,20 @@ h1 em {
   color: var(--muted);
   margin-top: 0.25rem;
 }
+.hero-img{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hero-img img{
+  height: 150px;
+  width: 150px;
+  text-align: center;
+  border: 2px solid #00ff99;
+  padding: 20px;
+  border-radius: 50%;
+}
+
 
 @media (max-width: 600px) {
   .hero-stats {

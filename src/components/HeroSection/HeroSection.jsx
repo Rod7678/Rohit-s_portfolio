@@ -1,39 +1,44 @@
-import "./heroSection.css"
+import "./heroSection.css";
 
 const HeroSection = () => {
   return (
     <section id="hero">
-      <p className="hero-eyebrow">Software Developer</p>
-      <h1>
-        Crafting <em>digital</em>
-        <br />
-        experiences
-      </h1>
-      <p className="hero-sub">
-        Hi, I'm Rohit Ghadge. A software engineer specialising in scalable
-        systems, AI, and delightful user interfaces.
-      </p>
-      <div className="hero-ctas">
-        <a href="#projects" className="btn-primary">
-          View My Work
-        </a>
-        <a href="#contact" className="btn-secondary">
-          Let's Talk →
-        </a>
+      <div className="hero-info">
+        <p className="hero-eyebrow">Software Developer</p>
+        <h1>
+          Crafting <em>digital</em>
+          <br />
+          experiences
+        </h1>
+        <p className="hero-sub">
+          Hi, I'm Rohit Ghadge. A software engineer specialising in scalable
+          systems, AI, and delightful user interfaces.
+        </p>
+        <div className="hero-ctas">
+          <a href="#projects" className="btn-primary">
+            View My Work
+          </a>
+          <a href="#contact" className="btn-secondary">
+            Let's Talk →
+          </a>
+        </div>
+        <div className="hero-stats">
+          <div>
+            <div className="stat-num">5+</div>
+            <div className="stat-label">Projects shipped</div>
+          </div>
+          <div>
+            <div className="stat-num">2+</div>
+            <div className="stat-label">Years experience</div>
+          </div>
+          <div>
+            <div className="stat-num">4+</div>
+            <div className="stat-label">Happy clients</div>
+          </div>
+        </div>
       </div>
-      <div className="hero-stats">
-        <div>
-          <div className="stat-num">5+</div>
-          <div className="stat-label">Projects shipped</div>
-        </div>
-        <div>
-          <div className="stat-num">2+</div>
-          <div className="stat-label">Years experience</div>
-        </div>
-        <div>
-          <div className="stat-num">4+</div>
-          <div className="stat-label">Happy clients</div>
-        </div>
+      <div className="hero-img">
+          <img src={"/favicon.svg "} alt="" />
       </div>
     </section>
   );
