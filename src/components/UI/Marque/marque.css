@@ -1,0 +1,40 @@
+.ticker-wrap {
+  background: transparent;
+  overflow: hidden;
+  white-space: nowrap;
+  padding: 14px 0;
+}
+.ticker-track {
+  display: inline-flex;
+  align-items: center;
+  gap: 24px;
+  animation: ticker-scroll 10s linear infinite var(--direction, forwards);
+  will-change: transform;
+}
+
+.ticker-wrap:hover .ticker-track {
+  animation-play-state: paused;
+}
+
+.ticker-item {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 0.35rem 0.85rem;
+  font-size: 0.8rem;
+  color: white;
+  /* color: var(--text); */
+  transition: border-color 0.2s;
+}
+
+@keyframes ticker-scroll {
+  /* to {
+    transform: translateX(-50%);
+  } */
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
